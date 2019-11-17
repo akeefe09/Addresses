@@ -1,0 +1,88 @@
+<div class="control-group contactSync hidden">
+    <label class="control-label" for="contactSelect" data-i18n="patientInfo:contactInfo.contactInfoLbl"></label>
+    <div class="controls">
+        <select id="contactSelect"></select>
+        <div id="guardianContactLabel" class="hidden" data-i18n="patientInfo:contactInfo.contactWarning"></div>
+    </div>
+</div>
+
+<div class="flexbox">
+    <div class="pull-left">
+        <div id="emailBlock" class="control-group">
+            <label class="control-label" for="email">
+                <span id="mandatory-patient-email" class="mandatoryField horizontal">*</span>
+                <span data-i18n="common:person.contactEmail"></span>
+            </label>
+            <div class="controls" id="emailValidator">
+                <input id="email" name="email" autocomplete="autoFillDisabled" type="text" maxlength="50" data-required="true" data-rule="havePatientEmail" data-emailvalidator="true"/>
+            </div>
+            <div id="noEmailSection" class="controls">
+                <label for="noEmailChk">
+                    <input id="noEmailChk" name="noEmailChk" type="checkbox" />
+                    <span id="noEmailLabel" class="checkbox-label" data-i18n="patientInfo:contactInfo.noEmail"></span>
+                </label>
+            </div>
+        </div>
+
+        <div id="referringProviderBlock" class="control-group">
+            <label class="control-label" for="referringProvider">
+                <%= getMandatorySpan("referring-provider") %>
+                <span data-i18n="common:person.referringProvider"></span>
+            </label>
+            <div class="controls" id="referringProviderValidator">
+                <input id="referringProvider" name="referringProvider" type="text" maxlength="50" data-required="true" data-rule="validationReferringProviderRule" />
+            </div>
+            <div id="noReferringProvider" class="controls">
+                <label for="noReferringProviderChk">
+                    <input id="noReferringProviderChk" name="noReferringProviderChk" type="checkbox" />
+                    <span id="noReferringProviderLabel" class="checkbox-label" data-i18n="patientInfo:contactInfo.noReferringProvider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div id="mandatoryPhoneWarning" class="control-group hidden">
+            <label class="mandatoryWarner">
+                <span class="mandatoryField horizontal">*</span>
+                <span id="onePhoneMandatory" data-i18n="common:person.atLeastOnePhoneNumber"></span>
+            </label>
+        </div>
+        <div id="homeBlock"></div>
+        <div id="mobileBlock"></div>
+        <div id="workBlock"></div>
+
+        <div class="control-group">
+            <label class="control-label" for="preferredContact" data-i18n="common:person.preferredContactMethod"></label>
+            <div class="controls">
+                <%= renderPreferredContact() %>
+            </div>
+        </div>
+
+        <div class="control-group" id="otherContactInfoBlock">
+            <label class="control-label" for="otherContactInfo" data-i18n="common:person.otherContactInfo" />
+            <div class="controls">
+                <textarea id="otherContactInfo" name="otherContactInfo" maxlength="4000" />
+            </div>
+        </div>
+    </div>
+
+    <div class ="right-column-margin" />
+
+    <div class="pull-left">
+        <div id='paciBlock'></div>
+        <div id="countryBlock"></div>
+        <div id="addressBlock"></div>
+        <div id="zipCodeBlock"></div>
+
+        <div class="control-group">
+            <label class="control-label" for="timezone">
+                <span class="mandatoryField horizontal">*</span>
+                <span data-i18n="common:person.timezone"></span>
+            </label>
+            <div class="controls">
+                <%= renderTimeZones() %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="btnRegion"></div>

@@ -1,0 +1,27 @@
+<div class="control-group" id="country-control-group">
+    <label class="control-label" for="country">
+        <%= manageCountryMandatoryStar() %>
+        <span class="label-text" data-i18n="common:address.country">[Country]</span>
+    </label>
+    <div class="controls">
+        <%= renderCountries() %>
+    </div>
+</div>
+
+<div class="control-group stateGroup">
+    <label class="control-label" for="state">
+    	<%= manageStateMandatoryStar() %>
+    	<span id="stateLabel" class="label-text" data-i18n="common:address.state">[State]</span>
+    </label>
+    <div class="controls state">
+    </div>
+</div>
+
+<div class="control-group areaGroup">
+    <label class="control-label" for="area">
+        <%= manageAreaMandatoryStar() %>
+        <span id="areaLabel" class="label-text" data-i18n="common:address.area">[State]</span>
+    </label>
+    <div class="controls area">
+    </div>
+</div>
