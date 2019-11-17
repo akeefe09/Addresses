@@ -1,5 +1,3 @@
-// the actual validation is done in an in-house library file we call mycalib. We use the parsley library for form validation
-
 // messages: {
 //     notempty: $.t('common:errors.required'),
 //     postalcode: $.t('common:errors.zipCode'),
