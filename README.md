@@ -1,4 +1,4 @@
-This is some of the production code I worked on for the HelloHealth EHR.
+This is a sample of some of the production code I worked on for the HelloHealth EHR. It is not the exact code we use, but it is based on it to give an idea.
 
 The most important part was supporting multiple countries. The countryState component provides the State and Country dropdown selects. The states or provinces fill the dropdown based on which country is selected.
 
